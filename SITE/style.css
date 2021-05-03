@@ -1,0 +1,23 @@
+* {
+    margin: 0px;
+padding: 0px;
+}
+
+header{
+    height: 130px;
+    width: 100%;
+    background-color: #363636;  
+    border-bottom: solid green 5px;
+    
+    
+}
+
+.imagem{
+    width: 125px;
+    height: 125px;
+
+}
+
+body{
+    border-color: whitesmoke;
+}
