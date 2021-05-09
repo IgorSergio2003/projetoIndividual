@@ -44,22 +44,81 @@ text-decoration: none;
 
 .corpo{
 width: 1300px;
-height: 700px;
-background-color: green;
+height: 800px;
 align-items: center;
 justify-content: center;
 text-align: center;
-margin-top: 15px;
+margin-top: 25px;
 margin-right: auto;
 margin-left: auto;
+
 }
 
 .banner{
-height: 350px;
+height: 400px;
 width: 100%;
-background-color: greenyellow;
-background-image: url("./banner.png");
+background-image: url("./banner2.png");
 text-align: center;
 background-size: cover; 
-padding: 0px;
+justify-content: center;
+align-items: center;
+margin-top: auto;
+border-radius: 15px;
+}
+
+h1{
+
+font-size: 45px;
+
+
+color: green;
+}
+
+h2{
+font-size: 30px;
+
+}
+
+.cant1{
+    margin-top: 50px;
+    width: 45%;
+    height: 350px;
+    
+    background-image: url("./billie.jpg");
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.cant2{
+    margin-top: 50px;
+    width: 45%;
+    height: 350px;
+    
+    background-image: url("./justin.jpeg");
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.cant{
+    display: flex;
+    justify-content: space-between;
+}
+
+.texto{
+ margin-top: 150px; 
+
+}
+
+footer{
+    border-bottom: solid green 5px;
+    height: 150px;
+background-color: #363636;
+text-align: center;
+color: whitesmoke;
+
+
+}
+
+.textfooter{
+    font-size: 20px;
 }
