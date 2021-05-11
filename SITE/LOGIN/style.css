@@ -1,0 +1,123 @@
+* {
+    margin: 0px;
+padding: 0px;
+}
+
+header{
+    height: 120px;
+    width: 100%;
+    background-color: #363636;  
+    border-bottom: solid green 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imagem{
+    width: 105px;
+    height: 105px;
+}
+
+body{
+    border-color: whitesmoke;
+}
+
+
+.container{
+width: 80%;
+height: 120px;
+margin: auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+font-size: 25px;
+color: green;
+
+}
+
+a{
+background-color: 363636;
+margin: 3px;
+color: white;
+border-radius: 3px;
+text-decoration: none;
+}
+
+a:hover{
+    background-color: white;
+    color: #363636;
+    }
+
+footer{
+    border-bottom: solid green 5px;
+    height: 150px;
+background-color: #363636;
+text-align: center;
+color: whitesmoke;
+margin-top: 100px;
+
+}
+
+.corpo-login{
+width: 700px;
+height: 400px;
+margin-left: auto;
+margin-right: auto;
+background-color: #A9A9A9; 
+margin-top: 100px;   
+border-radius: 8px;
+border: solid green 3px;    
+}
+
+h1{
+    text-align: center;
+  margin-top: 30px;
+  font-size: 35px;
+  font-family:Arial, Helvetica, sans-serif;
+  color: white;
+  -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: green;
+ 
+  
+}
+
+input{
+width: 550px;
+height: 30px;
+margin-top: 25px;
+border-radius: 7px;
+color: black;
+font-family:monospace ;
+
+}
+
+.texto{
+font-size: 25px;
+margin-left: 25px;
+font-weight: bold;
+}
+
+button{
+height: 30px;
+width: 140px;
+background-color: black;
+color: #32CD32;
+border-radius: 7px;
+font-weight: bold;
+font-size: 18px;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+transition: 1s;
+
+}
+
+.botoes{
+    margin-top: 30px;
+    text-align: center;
+
+}
+
+.btn:hover {
+color: black;
+background-color: green;
+    
+}

@@ -42,6 +42,11 @@ border-radius: 3px;
 text-decoration: none;
 }
 
+a:hover{
+background-color: white;
+color: #363636;
+}
+
 .corpo{
 width: 1300px;
 height: 800px;
@@ -84,9 +89,14 @@ font-size: 30px;
     width: 45%;
     height: 350px;
     
-    background-image: url("./billie.jpg");
-    background-size: cover;
+    
     border-radius: 5px;
+  
+}
+.cant1 img{
+    
+    height: 350px;
+    border-radius: 10px;
 }
 
 .cant2{
@@ -94,10 +104,15 @@ font-size: 30px;
     width: 45%;
     height: 350px;
     
-    background-image: url("./justin.jpeg");
-    background-size: cover;
+    margin-right: 10px;
+   
     border-radius: 5px;
 }
+.cant2 img{
+    border-radius: 10px;
+    height: 350px;
+    margin-right: 10px;
+    }
 
 .cant{
     display: flex;
