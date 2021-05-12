@@ -6,7 +6,9 @@
  idAlbum int primary key auto_increment,
  nomeAlbum varchar(45),
  generoAlbum varchar(45),
- dataLancamento date	
+ dataLancamento date,	
+  fkCantor int,
+ foreign key (fkCantor) references cantor(idCantor)
  );
  
  
@@ -14,9 +16,8 @@
  idCantor int primary key auto_increment,
  nomeCantor varchar(45),
  generoMusical varchar(45),
- nacionalidade varchar(45),
- fkAlbum int,
- foreign key (fkAlbum) references album(idAlbum)
+ nacionalidade varchar(45)
+ 
  );
  
  

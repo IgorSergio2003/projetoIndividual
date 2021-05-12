@@ -14,8 +14,7 @@ header{
 }
 
 .imagem{
-    width: 105px;
-    height: 105px;
+    height: 110px;
 }
 
 body{
@@ -41,6 +40,8 @@ color: white;
 border-radius: 3px;
 text-decoration: none;
 }
+
+
 
 a:hover{
 background-color: white;
@@ -104,14 +105,14 @@ font-size: 30px;
     width: 45%;
     height: 350px;
     
-    margin-right: 10px;
+    margin-right: 40px;
    
     border-radius: 5px;
 }
 .cant2 img{
     border-radius: 10px;
     height: 350px;
-    margin-right: 10px;
+   
     }
 
 .cant{
@@ -130,10 +131,22 @@ footer{
 background-color: #363636;
 text-align: center;
 color: whitesmoke;
-
+margin-top: 25px;
 
 }
 
 .textfooter{
     font-size: 20px;
+}
+
+.textohover{
+opacity: 1;
+transition: 1s;
+}
+
+.textohover:hover{
+opacity: 0.9;
+transform: translateY(-100px);
+
+z-index: 1;
 }

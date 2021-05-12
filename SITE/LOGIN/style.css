@@ -14,8 +14,7 @@ header{
 }
 
 .imagem{
-    width: 105px;
-    height: 105px;
+    height: 110px;
 }
 
 body{
@@ -35,7 +34,7 @@ color: green;
 
 }
 
-a{
+.container a{
 background-color: 363636;
 margin: 3px;
 color: white;
@@ -43,7 +42,17 @@ border-radius: 3px;
 text-decoration: none;
 }
 
-a:hover{
+a{
+    text-decoration: none;
+    color: green;
+}
+
+.btn a:hover{
+    color: black;
+    background-color: green;
+}
+
+.container a:hover{
     background-color: white;
     color: #363636;
     }
@@ -113,11 +122,11 @@ transition: 1s;
 .botoes{
     margin-top: 30px;
     text-align: center;
-
+    transition: 1s;
 }
 
 .btn:hover {
 color: black;
 background-color: green;
-    
+
 }

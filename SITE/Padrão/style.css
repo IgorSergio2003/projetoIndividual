@@ -14,8 +14,7 @@ header{
 }
 
 .imagem{
-    width: 105px;
-    height: 105px;
+    height: 110px;
 }
 
 body{
@@ -41,4 +40,26 @@ margin: 3px;
 color: white;
 border-radius: 3px;
 text-decoration: none;
+}
+
+footer{
+border-bottom: solid green 5px;
+height: 150px;
+background-color: #363636;
+text-align: center;
+color: whitesmoke;
+margin-top: 25px;
+margin-bottom: 0px;
+
+}
+
+.textfooter{
+    font-size: 20px;
+}
+
+.pt1{
+    width: 800px;
+    height: 200px;
+    background-color: blue;
+   
 }
