@@ -81,7 +81,7 @@ h1{
 .container1{
     height: 350px;
     text-align: center;
-    background-color: #A9A9A9;
+    background-color: #4F4F4F;
     display: flex;
     border-radius: 15px;
     border: solid green 3px;
@@ -89,7 +89,7 @@ h1{
 
 .container2{
     height: 350px;
-    background-color: #A9A9A9;
+    background-color: #4F4F4F;
     display: flex;
     margin-top: 50px;
     border-radius: 15px;

@@ -33,7 +33,8 @@
  foreign key (fkAlbum) references album(idalbum),
  fkMusica int,
   foreign key (fkMusica) references musica(idmusica),
- numOuvintes int
+ numOuvintes int,
+ primary key(fkAlbum,fkAlbum)
  );
  
  

@@ -1,0 +1,141 @@
+
+* {
+    margin: 0px;
+padding: 0px;
+}
+
+header{
+    height: 120px;
+    width: 100%;
+    background-color: #363636;  
+    border-bottom: solid green 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imagem{
+    height: 110px;
+}
+
+body{
+    border-color: whitesmoke;
+}
+
+
+.container{
+width: 80%;
+height: 120px;
+margin: auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+font-size: 25px;
+color: green;
+
+}
+
+a{
+background-color: 363636;
+margin: 3px;
+color: white;
+border-radius: 3px;
+text-decoration: none;
+}
+
+footer{
+border-bottom: solid green 5px;
+height: 150px;
+background-color: #363636;
+text-align: center;
+color: whitesmoke;
+margin-top: 25px;
+margin-bottom: 0px;
+
+}
+
+.textfooter{
+    font-size: 20px;
+}
+
+
+.corpo-musica{
+width: 500px;
+height: 1450px;
+background-color: #4f4f4f;
+justify-content: center;
+align-items: center;
+text-align: center;
+margin-top: 60px;
+margin-left: auto;
+margin-right: auto;
+}
+
+audio{
+    filter: sepia(20%) saturate(20%) grayscale(1) contrast(99%) invert(90%);
+    width: 450px;
+    height: 80px;
+
+}
+
+.divmus{
+text-align: center;
+align-items: center;
+justify-content: center;
+display: flex;
+flex-direction: column;
+}
+
+
+.imagemcan {
+height: 300px;
+width: 300px;
+background-image: url("./justin.jpg");
+background-size: cover;
+border-radius: 8px;
+margin-top: 60px;
+opacity: 1;
+}
+
+.textoima:hover{
+    
+    text-align:center;
+    opacity:1;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    color: white;
+    transition: 1s;
+  }
+  
+  .textoima{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    height: 300px;
+    width: 300px;
+    opacity:0;
+    background-color:rgba(0, 0, 0, 0.5);
+    
+  }
+
+.imagemcan2 {
+    height: 300px;
+    width: 300px;
+    
+    background-image: url("./billie.jpg");
+    background-size: cover;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 60px;
+    }
+
+
+    .imagemcan3 {
+        height: 300px;
+        width: 300px;
+        
+        background-image: url("./dualipa.jpg");
+        background-size: cover;
+        border-radius: 8px;
+        margin-top: 60px;
+        }
