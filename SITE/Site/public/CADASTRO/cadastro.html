@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rhythm</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./logo sem fundo.png" type="image/x-icon">
+</head>
+<body>
+<header>
+<div class="container">
+    <img class="imagem" src="./logo.png">
+   
+    <ul>
+        <a href="../Home/index.html">Home</a>
+        <a href="../SOBRE/sobre.html">Sobre</a>
+        <a href="../LOGIN/login.html">Login</a>
+</ul>
+
+</div>
+</header>    
+
+
+<div class="corpo-cadastro">
+    <br>
+    <h1>Cadastro</h1>
+    <form method="POST" id="form_cadastro">
+    <span class="texto">Nome:</span><input type="text" name="nomeUsuario" placeholder="Digite seu nome"><br>
+     <span class="texto"> E-mail:</span><input  type="text" name="emailUsuario" placeholder="Digite seu E-mail"><br>
+    <span class="texto"> Senha:</span><input  type="password" name="senhaUsuario" placeholder="Digite sua senha"><br>
+    
+        
+    <span class="texto"> Genêro Favorito:</span><input  name="generoFavorito" placeholder="Digite seu Genêro"><br>
+
+    <span class="texto">Cantor Favorito:</span><input name="cantorFavorito" placeholder="Digite seu cantor ou banda favorita">
+    <br>
+</form>
+    <div class="corpo">
+    <button class="btn" onclick="cadastrar()" >Cadastrar</button>
+</div>
+
+</div>
+
+<footer>
+    <div class="textfooter">
+        <br>
+        <br>
+        Contato: Rhythm@outlook.com
+        
+        <br>
+         Telefone: 97384573
+        <br>
+        <br>
+        ©The Rhythm
+    </div>
+
+</footer>
+
+</body>
+</html>
+<script>
+
+function cadastrar() {
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+            
+            if (response.ok) {
+
+                window.location.href='../LOGIN/login.html';
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                });
+                
+            }
+        });
+        return false;
+    }    
+
+</script>
