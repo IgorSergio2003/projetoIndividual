@@ -49,12 +49,10 @@ color: #363636;
 }
 
 .corpo{
-width: 1300px;
-height: 800px;
+width: 100%;
 align-items: center;
 justify-content: center;
 text-align: center;
-margin-top: 25px;
 margin-right: auto;
 margin-left: auto;
 
@@ -69,19 +67,20 @@ background-size: cover;
 justify-content: center;
 align-items: center;
 margin-top: auto;
-border-radius: 15px;
+
 }
 
 h1{
 
 font-size: 45px;
-
+font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 color: green;
 }
 
 h2{
 font-size: 30px;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 }
 
@@ -92,6 +91,7 @@ font-size: 30px;
     border-radius: 5px;
   background-image: url(./billie.jpg);
   background-size: cover;
+  margin: auto;
 }
 
 .textocant{
@@ -104,6 +104,7 @@ font-size: 30px;
     transition: opacity .2s linear;
     background-color:rgba(255, 255, 255,0.4);
     height: 100%;
+    margin: auto;
     
   }
 
@@ -116,14 +117,16 @@ font-size: 30px;
     border-radius: 5px;
     background-image: url(./justin.jpeg);
     background-size: cover;
+    margin: auto;
 }
 .cant1:hover .textocant{
     opacity:1;
    }
 
-.cant{
+.container-cant{
     display: flex;
-    justify-content: space-between;
+    margin-top: 50px;
+    
 }
 
 .cant2:hover .textocant{
@@ -146,4 +149,24 @@ margin-top: 25px;
 
 .textfooter{
     font-size: 20px;
+}
+
+
+.container-show{
+    display: flex;
+    width: 80%;
+    height: 350px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 15px;
+    background-image: url('./lolla.jpg');
+    background-size: cover;
+}
+
+.container-show:hover .textocant{
+    opacity: 1;
+}
+
+.container-show .textocant{
+    font-size: 28px;
 }

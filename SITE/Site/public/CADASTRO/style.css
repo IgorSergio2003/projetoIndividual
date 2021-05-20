@@ -1,139 +1,140 @@
 * {
-    margin: 0px;
-padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
-header{
-    height: 120px;
-    width: 100%;
-    background-color: #363636;  
-    border-bottom: solid green 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+header {
+  height: 120px;
+  width: 100%;
+  background-color: #363636;
+  border-bottom: solid green 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.imagem{
-    height: 110px;
+.imagem {
+  height: 110px;
 }
 
-body{
-    border-color: whitesmoke;
+body {
+  border-color: whitesmoke;
 }
 
-
-.container{
-width: 80%;
-height: 120px;
-margin: auto;
-display: flex;
-align-items: center;
-justify-content: space-between;
-font-size: 25px;
-color: green;
-
+.container {
+  width: 80%;
+  height: 120px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 25px;
+  color: green;
 }
 
-a{
-background-color: 363636;
-margin: 3px;
-color: white;
-border-radius: 3px;
-text-decoration: none;
+a {
+  background-color: 363636;
+  margin: 3px;
+  color: white;
+  border-radius: 3px;
+  text-decoration: none;
 }
 
-a:hover{
-    background-color: white;
-    color: #363636;
-    }
-
-.corpo-cadastro{
-    width: 700px;
-    height: 500px;
-    background-color: #4F4F4F;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 70px;
-    border-radius: 8px;
-    border: solid green 3px;  
-
+a:hover {
+  background-color: white;
+  color: #363636;
 }
 
-
-
-input{
-    width: 450px;
-height: 30px;
-
-border-radius: 7px;
-color: black;
-font-family:monospace ;
-margin-top: 30px;
-margin-left: 5px;
-
+.corpo-cadastro {
+  width: 800px;
+  height: 600px;
+  background-color: #4f4f4f;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  border-radius: 8px;
+  border: solid green 3px;
 }
 
-.texto{
-    font-size: 25px;
-    margin-left: 25px;
-    font-weight: bold;   
-}
-
-h1{
-    text-align: center;
-    margin-top: 30px;
-    font-size: 35px;
-    font-family:Arial, Helvetica, sans-serif;
-    color: white;
-    -webkit-text-stroke-width: 2px;
-      -webkit-text-stroke-color: green; 
-}
-
-footer{
-    border-bottom: solid green 5px;
-    height: 150px;
-background-color: #363636;
-text-align: center;
-color: whitesmoke;
-margin-top: 100px;
-
-}
-
-select{
-margin-top: 30px;
-margin-left: 5px;
-
+input {
+  width: 450px;
+  height: 30px;
+  border-radius: 7px;
+  color: black;
+  font-family: monospace;
+  margin-top: 30px;
+  margin-left: 5px;
 }
 
 
-button{
-    height: 30px;
-    width: 140px;
-    background-color: black;
-    color: #32CD32;
-    border-radius: 7px;
-    font-weight: bold;
-    font-size: 18px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    transition: 1s;
-    margin-top: 30px;
-    text-align: center;
-    
-    }
-    
-    .botoes{
-        margin-top: 30px;
-        text-align: center;
-    
-    }
+.texto {
+  font-size: 25px;
+  margin-left: 25px;
+  font-weight: bold;
+}
 
-    .corpo{
-       text-align: center; 
-       margin-top: 15px;
-    }
 
-    .btn:hover {
-        color: black;
-        background-color: green;
-            
-        }
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: green;
+}
+
+
+
+footer {
+  border-bottom: solid green 5px;
+  height: 150px;
+  background-color: #363636;
+  text-align: center;
+  color: whitesmoke;
+  margin-top: 100px;
+}
+
+
+
+select {
+  margin-top: 30px;
+  margin-left: 5px;
+}
+
+
+
+button {
+  height: 30px;
+  width: 140px;
+  background-color: black;
+  color: #32cd32;
+  border-radius: 7px;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: 1s;
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+
+.botoes {
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+
+.corpo {
+  text-align: center;
+  margin-top: 15px;
+
+}
+
+.btn:hover {
+  color: black;
+  background-color: green;
+}

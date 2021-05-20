@@ -28,7 +28,7 @@
 <form method="POST" id="form_login">
  <span class="texto"> Email: </span><input id="input_email" name="emailUsuario" placeholder="Digite o seu E-mail"><br>
  <br>
- <span class="texto">Senha: </span><input id="input_senha" name="senhaUsuario" placeholder="Digite a sua senha">
+ <span class="texto">Senha: </span><input id="input_senha" type="password" name="senhaUsuario" placeholder="Digite a sua senha">
 </form>
  <div class="botoes">
  <button class="btn" onclick="entrar()">Login</button>
@@ -44,7 +44,6 @@
         <br>
         <br>
         Contato: Rhythm@outlook.com
-        
         <br>
         Telefone: 97384573
         <br>
@@ -70,7 +69,10 @@ function entrar() {
                 resposta.json().then(json => {
 
                     sessionStorage.login_usuario_meuapp = json.emailUsuario;
-                    sessionStorage.nome_usuario_meuapp = json.nomeusuario;
+                    sessionStorage.nome_usuario_meuapp = json.nomeUsuario;
+                    sessionStorage.generoFavorito_usuario = json.generoFavorito;
+                     sessionStorage.cantorFavorito_usuario = json.cantorFavorito;
+                     sessionStorage.musicaFavorita_usuario = json.musicaFavorita;
 
                     window.location.href = '../principal/musica.html';
                 });

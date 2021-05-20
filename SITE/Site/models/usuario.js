@@ -29,12 +29,17 @@ module.exports = (sequelize, DataTypes) => {
 			allowNull: false
 		},
 		genero: {
-			field: 'generofavorito',
+			field: 'generoFavorito',
 			type: DataTypes.STRING,
 			allowNull: false
 		},
 		cantor: {
-			field: 'cantorfavorito',
+			field: 'cantorFavorito',
+			type: DataTypes.STRING,
+			allowNull: false
+		},
+		musica: {
+			field: 'musicaFavorita',
 			type: DataTypes.STRING,
 			allowNull: false
 		},

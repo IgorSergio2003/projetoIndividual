@@ -44,7 +44,8 @@
  emailUsuario varchar(45),
  senhaUsuario char(16),
 generoFavorito varchar(45),
-cantorFavorito varchar(45)	
+cantorFavorito varchar(45),
+musicaFavorita varchar(45)	
  );
  
  create table votacao(

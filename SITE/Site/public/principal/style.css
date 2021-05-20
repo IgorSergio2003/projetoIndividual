@@ -61,14 +61,14 @@ margin-bottom: 0px;
 
 .corpo-musica{
 width: 500px;
-height: 1450px;
-background-color: #4f4f4f;
+height: 100%;
+
 justify-content: center;
 align-items: center;
 text-align: center;
 margin-top: 60px;
-margin-left: auto;
-margin-right: auto;
+margin: auto;
+
 }
 
 audio{
@@ -84,6 +84,12 @@ align-items: center;
 justify-content: center;
 display: flex;
 flex-direction: column;
+border: green 3px solid;
+margin-top: 50px;
+width: 500px;
+height: 500px   ;
+background-color: #4f4f4f;
+border-radius: 10px ;
 }
 
 .perfil{
@@ -94,7 +100,8 @@ margin-left: auto;
 margin-right: auto;
 background-color: #4f4f4f;
 border-radius: 5px;
-
+padding: auto;
+text-align: center;
 
 }
 
@@ -206,4 +213,9 @@ border-radius: 6px;
         background-size: cover;
         border-radius: 8px;
         margin-top: 60px;
+        }
+
+        h2{
+           
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
