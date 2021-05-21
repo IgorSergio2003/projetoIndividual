@@ -7,6 +7,7 @@
     <title>The Rhythm</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="./logo sem fundo.png" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <header>
@@ -32,6 +33,9 @@
 
       <div class="ranking">
         <h1>Ranking das melhores músicas</h1>
+        <div class="graph">
+          <canvas id="myChartPizza"></canvas>
+        </div>
       </div>
     </div>
     <button onclick="descobrir()" id="btn_descobrir">Descobrir músicas</button>
@@ -94,6 +98,31 @@
       </div>
     </footer>
   </body>
+  <script>
+    const labelsPizza = ["Peaches - Justin Bieber","Power - Billie Ellish","Levitating - Dua Lipa"];
+
+const dataPizza = {
+labels: labelsPizza,
+datasets: [
+  {
+  label: 'Quantidade de votos',
+  backgroundColor: ["blue","yellow","red"],
+  borderColor: 'green',
+  data: [153, 60, 17],
+  
+}
+]
+};  
+
+const configPizza ={
+type:"pie",
+data: dataPizza,
+options: {maintainAspectRatio: false},
+};
+
+var myChartPizza = new Chart(document.getElementById("myChartPizza"),configPizza);
+  </script>
+
 </html>
 
 <script>
