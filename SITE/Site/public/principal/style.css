@@ -124,6 +124,12 @@ text-align: center;
     align-items: center;
     justify-content: center;
     }
+
+    .container-votacao span{
+        color: white;
+        font-size: 25px;
+    }
+
     .content-votacao{
         width: 85%;
         height: 100%;

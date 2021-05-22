@@ -33,18 +33,21 @@
         <div class="content-votacao">
           <div class="contentmus">
             <span>Your Power</span>
-          <img src="./billie.jpg" onclick="" class="">
+          <img src="./billie.jpg" onclick="btncant1()" >
         </div>
         <div class="contentmus">
           <span>Levitating</span>
-          <img src="./dualipa.jpg" onclick="" class="">
+          <img src="./dualipa.jpg" onclick="btncant2()" >
         </div>
         <div class="contentmus">
           <span>Peach</span>
-          <img src="./justin.jpg" onclick="" class="">
+          <img src="./justin.jpg" onclick="btncant3()" >
         </div>
         </div>
+        <span id="teste"></span>
       </div>
+
+     
 
       <div class="ranking">
         <h1>Ranking das melhores músicas</h1>
@@ -122,6 +125,31 @@
     </footer>
   </body>
   <script>
+
+var votacaomus1 = 41;
+
+var votacaomus2 = 20;
+
+var votacaomus3 = 50;
+
+
+
+function btncant1(){
+  teste.innerHTML = `Você votou na música "Your power" `
+votacaomus1 = votacaomus1 + 1;
+
+}
+function btncant2(){
+  teste.innerHTML = `Você votou na música "Levitating"  `
+  votacaomus2 = votacaomus2 + 1;
+}
+function btncant3(){
+  teste.innerHTML = `Você votou na música "Peaches"  `
+  votacaomus3 = votacaomus3 + 1;
+}
+
+
+
     const labelsPizza = ["Peaches - Justin Bieber","Power - Billie Ellish","Levitating - Dua Lipa"];
 
 const dataPizza = {
@@ -131,7 +159,7 @@ datasets: [
   label: 'Quantidade de votos',
   backgroundColor: ["blue","yellow","red"],
   borderColor: 'green',
-  data: [153, 60, 17],
+  data: [votacaomus1, votacaomus2, votacaomus3],
   
 }
 ]
@@ -172,8 +200,18 @@ var myChartPizza = new Chart(document.getElementById("myChartPizza"),configPizza
 
 
 
+
+
+
   texto_bemvindo.innerHTML = `<br>Olá ${sessionStorage.nome_usuario_meuapp} <br>
 Fiquei sabendo em que você gosta de ${sessionStorage.generoFavorito_usuario}
 <br>Gosta da música ${sessionStorage.musicaFavorita_usuario} do(a) artista ${sessionStorage.cantorFavorito_usuario}`;
+
+
+
+var votacaomus1 = 0;
+var votacaomus2 = 0;
+var votacaomus1 = 0;
+
 
 </script>
