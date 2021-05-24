@@ -29,7 +29,7 @@
       </div>
 
       <div class="container-votacao">
-        <h1>Vote na melhor Música</h1>
+        <h1>Qual música você mais gosta?</h1>
         <div class="content-votacao">
           <div class="contentmus">
             <span>Your Power</span>
@@ -44,7 +44,7 @@
           <img src="./justin.jpg" onclick="btncant3()" >
         </div>
         </div>
-        <span id="teste"></span>
+        <span id="textoVotacao"></span>
       </div>
 
      
@@ -63,6 +63,7 @@
     </button>
   </div>
 
+  <div id="testevot"></div>
     <div id="mus_btn" class="corpo-musica" style="display: none">
       <div class="divmus">
         <div class="imagemcan">
@@ -106,6 +107,7 @@
         ></audio>
       </div>
     </div>
+    
 
 
 
@@ -124,6 +126,7 @@
       </div>
     </footer>
   </body>
+  
   <script>
 
 var votacaomus1 = 41;
@@ -135,17 +138,18 @@ var votacaomus3 = 50;
 
 
 function btncant1(){
-  teste.innerHTML = `Você votou na música "Your power" `
-votacaomus1 = votacaomus1 + 1;
+  textoVotacao.innerHTML = `${sessionStorage.nome_usuario_meuapp} Muito boa sua escolha, as músicas da Billie Ellish são muito boas.`
+
+  
 
 }
 function btncant2(){
-  teste.innerHTML = `Você votou na música "Levitating"  `
-  votacaomus2 = votacaomus2 + 1;
+  textoVotacao.innerHTML = `${sessionStorage.nome_usuario_meuapp} que escolha boa, esse hit da Dua Lipa com o DaBaby está fazendo muito sucesso.`
+  
 }
 function btncant3(){
-  teste.innerHTML = `Você votou na música "Peaches"  `
-  votacaomus3 = votacaomus3 + 1;
+  textoVotacao.innerHTML = `${sessionStorage.nome_usuario_meuapp}Música muito moa do Justin, esse novo albúm dele está ótimo!`
+  
 }
 
 

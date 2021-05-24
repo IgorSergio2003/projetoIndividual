@@ -148,6 +148,7 @@ text-align: center;
     .contentmus{
 text-align: center;
 width: 33%;
+
     }
 
     .contentmus span{
@@ -261,4 +262,9 @@ border-radius: 6px;
             align-items: center;
             justify-content: center;
             margin-top: 20px;
+        }
+
+        #texto_votacao{
+            padding: 10px;
+            text-align: center;
         }
