@@ -167,6 +167,39 @@ width: 33%;
         
         }
 
+    .musicasfavoritas{
+        margin-top: 100px;
+        height: 300px;
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #4f4f4f;
+        border-radius: 5px;
+        
+    }    
+    input{
+        border-radius: 3px;
+        border: green 1px solid;
+        width: 200px;
+        height: 25px;
+    }
+
+
+    .inputmusicas{
+        height: 100%;
+        width: 100%;
+       text-align: center;
+        font-size: 25px;
+        color: white;
+    }
+
+    .musicasfavoritas     h1{
+        color: white;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: green;
+        font-size: 35px;
+    }
 
 .container-votacao h1{
     color: white;
@@ -267,4 +300,11 @@ border-radius: 6px;
         #texto_votacao{
             padding: 10px;
             text-align: center;
+        }
+
+        #resultadoranking{
+           text-align: center;
+            color: white;
+            margin-top: 5px;
+
         }

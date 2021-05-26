@@ -49,12 +49,30 @@
 
      
 
+      <div class="musicasfavoritas">
+        
+        <h1>Ranking das melhores músicas</h1>
+        <br>
+        <br>
+     <div class="inputmusicas">
+       Digite suas 3 músicas favoritas:<input id="in_musica" placeholder="Digite suas 3 músicas favoritas">
+       <button onclick="ver_musicafav()">Ver Músicas favoritas</button>
+
+       <span id="textomusica"></span>
+     </div>
+     
+    
+    </div>
+
+
       <div class="ranking">
         <h1>Ranking das melhores músicas</h1>
         <div class="graph">
           <canvas id="myChartPizza"></canvas>
         </div>
+        <div id="resultadoranking"></div>
       </div>
+
     </div>
     <div class="btn-displays">
     <button onclick="descobrir()" id="btn_descobrir">Descobrir músicas</button>
@@ -62,6 +80,12 @@
       Ver ranking
     </button>
   </div>
+
+
+
+
+
+
 
   <div id="testevot"></div>
     <div id="mus_btn" class="corpo-musica" style="display: none">
@@ -80,6 +104,7 @@
       </div>
 
 
+
       <div class="divmus">
         <div class="imagemcan2">
           <div class="textoima">
@@ -92,6 +117,8 @@
           controls
         ></audio>
       </div>
+
+
 
 
       <div class="divmus">
@@ -111,22 +138,24 @@
 
 
 
+
     <footer>
       <div class="textfooter">
-        <br />
-        <br />
-
+        <br/>
+        <br/>
         Contato: Rhythm@outlook.com
-
-        <br />
+        <br/>
         Telefone: 97384573
-        <br />
-        <br />
+        <br/>
+        <br/>
         ©The Rhythm
       </div>
     </footer>
+
   </body>
   
+
+
   <script>
 
 var votacaomus1 = 41;
@@ -135,12 +164,17 @@ var votacaomus2 = 20;
 
 var votacaomus3 = 50;
 
+var media = votacaomus1 + votacaomus2 + votacaomus3;
+
+var media1 = (votacaomus1 * 100 / media).toFixed(0);
+var media2 = (votacaomus2 * 100 / media).toFixed(0);
+var media3 = (votacaomus3 * 100 / media).toFixed(0);
+
 
 
 function btncant1(){
   textoVotacao.innerHTML = `${sessionStorage.nome_usuario_meuapp} Muito boa sua escolha, as músicas da Billie Ellish são muito boas.`
 
-  
 
 }
 function btncant2(){
@@ -148,22 +182,23 @@ function btncant2(){
   
 }
 function btncant3(){
-  textoVotacao.innerHTML = `${sessionStorage.nome_usuario_meuapp}Música muito moa do Justin, esse novo albúm dele está ótimo!`
+  textoVotacao.innerHTML = `${sessionStorage.nome_usuario_meuapp} Música muito moa do Justin, esse novo albúm dele está ótimo!`
   
 }
 
 
-
     const labelsPizza = ["Peaches - Justin Bieber","Power - Billie Ellish","Levitating - Dua Lipa"];
 
+    
 const dataPizza = {
 labels: labelsPizza,
 datasets: [
   {
   label: 'Quantidade de votos',
-  backgroundColor: ["blue","yellow","red"],
-  borderColor: 'green',
-  data: [votacaomus1, votacaomus2, votacaomus3],
+  backgroundColor: ["gray","yellow","red"],
+  borderColor: 'white',
+  
+  data: [votacaomus1, votacaomus2,votacaomus3],
   
 }
 ]
@@ -176,11 +211,16 @@ options: {maintainAspectRatio: false},
 };
 
 var myChartPizza = new Chart(document.getElementById("myChartPizza"),configPizza);
-  </script>
 
+  </script>
 </html>
 
 <script>
+
+
+
+resultadoranking.innerHTML = `Levitating - ${media3}% , Peaches - ${media1}% , Your Power - ${media2}%`;
+
   function descobrir() {
     mus_btn.style.display = "block";
     btn_descobrir.style.display = "none";
@@ -203,8 +243,16 @@ var myChartPizza = new Chart(document.getElementById("myChartPizza"),configPizza
   }
 
 
+  var lista_ranking = [];
+function ver_musicafav(){
+var rankMusica = Number(in_musica.value);
+lista_ranking.push(rankMusica);
 
-
+  for(var contador = 0; contador < lista_ranking.length; contador++){
+    var rank = lista_ranking[contador]
+    textomusica.innerHTML += `${rank}<br>`
+  }
+}
 
 
   texto_bemvindo.innerHTML = `<br>Olá ${sessionStorage.nome_usuario_meuapp} <br>
@@ -212,10 +260,6 @@ Fiquei sabendo em que você gosta de ${sessionStorage.generoFavorito_usuario}
 <br>Gosta da música ${sessionStorage.musicaFavorita_usuario} do(a) artista ${sessionStorage.cantorFavorito_usuario}`;
 
 
-
-var votacaomus1 = 0;
-var votacaomus2 = 0;
-var votacaomus1 = 0;
 
 
 </script>
