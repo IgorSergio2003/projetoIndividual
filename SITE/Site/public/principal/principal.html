@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Rhythm</title>
+    <title>The Rhythm || Dashboard</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="./logo sem fundo.png" type="image/x-icon" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../funcoes.js"></script>
   </head>
   <body>
+    <!-- construindo header -->
     <header>
       <div class="container">
         <img class="imagem" src="./logo.png" />
@@ -17,54 +19,62 @@
         <ul>
           <a href="../Home/index.html">Músicas</a>
           <a href="../SOBRE/sobre.html">Sobre</a>
-          <button onclick="logoff()">Sair</button>
+          <a onclick="logoff()">Sair</a>
+          
         </ul>
-        
       </div>
     </header>
+
+    <!-- corpo da página -->
+
     <div id="container_corpo">
+      <!-- Perfil usuário -->
       <div class="perfil">
         <h1>Bem vindo</h1>
         <h2 id="texto_bemvindo"></h2>
       </div>
 
+      <!-- votação do usuário -->
       <div class="container-votacao">
         <h1>Qual música você mais gosta?</h1>
         <div class="content-votacao">
           <div class="contentmus">
             <span>Your Power</span>
-          <img src="./billie.jpg" onclick="btncant1()" >
-        </div>
-        <div class="contentmus">
-          <span>Levitating</span>
-          <img src="./dualipa.jpg" onclick="btncant2()" >
-        </div>
-        <div class="contentmus">
-          <span>Peach</span>
-          <img src="./justin.jpg" onclick="btncant3()" >
-        </div>
+            <img src="./billie.jpg" onclick="btncant1()" />
+          </div>
+
+          <div class="contentmus">
+            <span>Levitating</span>
+            <img src="./dualipa.jpg" onclick="btncant2()" />
+          </div>
+
+          <div class="contentmus">
+            <span>Peach</span>
+            <img src="./justin.jpg" onclick="btncant3()" />
+          </div>
         </div>
         <span id="textoVotacao"></span>
       </div>
 
-     
-
+      <!-- Musicas favoritas do usuário -->
       <div class="musicasfavoritas">
-        
         <h1>Ranking das melhores músicas</h1>
-        <br>
-        <br>
-     <div class="inputmusicas">
-       Digite suas 3 músicas favoritas:<input id="in_musica" placeholder="Digite suas 3 músicas favoritas">
-       <button onclick="ver_musicafav()">Ver Músicas favoritas</button>
+        <br />
+        <br />
+        <div class="inputmusicas">
+          Digite suas 3 músicas favoritas:<input
+            id="in_musica"
+            placeholder="Digite suas 3 músicas favoritas"/>
+            <br>
+          <span id="textomusica"></span>
+          
+          <button onclick="ver_musicafav()" id="IdBotaoMusicaFav">Ver Músicas favoritas</button>
+          <button onclick="atualizaMusica()" id="idAtualizaMusica" style="display: none;" >Voltar</button>
+          
+        </div>
+      </div>
 
-       <span id="textomusica"></span>
-     </div>
-     
-    
-    </div>
-
-
+      <!-- ranking de melhores músicas -->
       <div class="ranking">
         <h1>Ranking das melhores músicas</h1>
         <div class="graph">
@@ -72,22 +82,20 @@
         </div>
         <div id="resultadoranking"></div>
       </div>
-
     </div>
+
+    <!-- Botões de ver e esconder músicas -->
     <div class="btn-displays">
-    <button onclick="descobrir()" id="btn_descobrir">Descobrir músicas</button>
-    <button onclick="ranking()" id="btn_ranking" style="display: none">
-      Ver ranking
-    </button>
-  </div>
+      <button onclick="descobrir()" id="btn_descobrir">
+        Mostrar músicas
+      </button>
+      <button onclick="ranking()" id="btn_ranking" style="display: none">
+        Esconder músicas
+      </button>
+    </div>
 
-
-
-
-
-
-
-  <div id="testevot"></div>
+    <!--div das músicas -->
+    <div id="testevot"></div>
     <div id="mus_btn" class="corpo-musica" style="display: none">
       <div class="divmus">
         <div class="imagemcan">
@@ -103,8 +111,6 @@
         ></audio>
       </div>
 
-
-
       <div class="divmus">
         <div class="imagemcan2">
           <div class="textoima">
@@ -117,9 +123,6 @@
           controls
         ></audio>
       </div>
-
-
-
 
       <div class="divmus">
         <div class="imagemcan3">
@@ -134,93 +137,86 @@
         ></audio>
       </div>
     </div>
-    
 
-
-
-
+    <!-- Footer do site -->
     <footer>
       <div class="textfooter">
-        <br/>
-        <br/>
-        Contato: Rhythm@outlook.com
-        <br/>
+        <br />
+        
+        <a href="../SUPORTE/suporte.html"> Clique aqui para dúvidas e problemas.</a>
+        <br />
         Telefone: 97384573
-        <br/>
-        <br/>
+        <br />
+      <br>
         ©The Rhythm
       </div>
     </footer>
-
   </body>
-  
 
 
   <script>
 
-var votacaomus1 = 41;
+    // Gráfico do ranking
+    var votacaomus1 = 41;
 
-var votacaomus2 = 20;
+    var votacaomus2 = 20;
 
-var votacaomus3 = 50;
+    var votacaomus3 = 50;
 
-var media = votacaomus1 + votacaomus2 + votacaomus3;
+    var media = votacaomus1 + votacaomus2 + votacaomus3;
 
-var media1 = (votacaomus1 * 100 / media).toFixed(0);
-var media2 = (votacaomus2 * 100 / media).toFixed(0);
-var media3 = (votacaomus3 * 100 / media).toFixed(0);
+    var media1 = ((votacaomus1 * 100) / media).toFixed(0);
+    var media2 = ((votacaomus2 * 100) / media).toFixed(0);
+    var media3 = ((votacaomus3 * 100) / media).toFixed(0);
 
+    const labelsPizza = [
+      "Peaches - Justin Bieber",
+      "Power - Billie Ellish",
+      "Levitating - Dua Lipa",
+    ];
 
+    const dataPizza = {
+      labels: labelsPizza,
+      datasets: [
+        {
+          label: "Quantidade de votos",
+          backgroundColor: ["#006400", "#7CFC00", "#90EE90"],
+          borderColor: "white",
 
-function btncant1(){
-  textoVotacao.innerHTML = `${sessionStorage.nome_usuario_meuapp} Muito boa sua escolha, as músicas da Billie Ellish são muito boas.`
+          data: [votacaomus1, votacaomus2, votacaomus3],
+        },
+      ],
+    };
 
+    const configPizza = {
+      type: "pie",
+      data: dataPizza,
+      options: { maintainAspectRatio: false },
+    };
 
-}
-function btncant2(){
-  textoVotacao.innerHTML = `${sessionStorage.nome_usuario_meuapp} que escolha boa, esse hit da Dua Lipa com o DaBaby está fazendo muito sucesso.`
-  
-}
-function btncant3(){
-  textoVotacao.innerHTML = `${sessionStorage.nome_usuario_meuapp} Música muito moa do Justin, esse novo albúm dele está ótimo!`
-  
-}
-
-
-    const labelsPizza = ["Peaches - Justin Bieber","Power - Billie Ellish","Levitating - Dua Lipa"];
-
-    
-const dataPizza = {
-labels: labelsPizza,
-datasets: [
-  {
-  label: 'Quantidade de votos',
-  backgroundColor: ["gray","yellow","red"],
-  borderColor: 'white',
-  
-  data: [votacaomus1, votacaomus2,votacaomus3],
-  
-}
-]
-};  
-
-const configPizza ={
-type:"pie",
-data: dataPizza,
-options: {maintainAspectRatio: false},
-};
-
-var myChartPizza = new Chart(document.getElementById("myChartPizza"),configPizza);
-
+    var myChartPizza = new Chart(
+      document.getElementById("myChartPizza"),
+      configPizza
+    );
   </script>
 </html>
 
 <script>
 
+  // funções dos botões da votação
+  function btncant1() {
+    textoVotacao.innerHTML = `${sessionStorage.nome_usuario_meuapp} muito boa sua escolha, as músicas da Billie Ellish são muito boas.`;
+  }
+  function btncant2() {
+    textoVotacao.innerHTML = `${sessionStorage.nome_usuario_meuapp} que boa escolha, esse hit da Dua Lipa com o DaBaby está fazendo muito sucesso.`;
+  }
+  function btncant3() {
+    textoVotacao.innerHTML = `${sessionStorage.nome_usuario_meuapp} música muito boa do Justin, esse novo albúm dele está ótimo!`;
+  }
 
+  resultadoranking.innerHTML = `Levitating - ${media3}% , Peaches - ${media1}% , Your Power - ${media2}%`;
 
-resultadoranking.innerHTML = `Levitating - ${media3}% , Peaches - ${media1}% , Your Power - ${media2}%`;
-
+  // botão em que vê as músicas
   function descobrir() {
     mus_btn.style.display = "block";
     btn_descobrir.style.display = "none";
@@ -229,6 +225,7 @@ resultadoranking.innerHTML = `Levitating - ${media3}% , Peaches - ${media1}% , Y
     window.scrollBy(0, -1500);
   }
 
+  // botão em que esconde as músicas
   function ranking() {
     mus_btn.style.display = "none";
     btn_descobrir.style.display = "block";
@@ -236,30 +233,39 @@ resultadoranking.innerHTML = `Levitating - ${media3}% , Peaches - ${media1}% , Y
     btn_ranking.style.display = "none";
   }
 
-  function logoff() {
-    finalizar_sessao();
-    sessionStorage.clear();
-    window.location.href = "../LOGIN/login.html";
-  }
 
 
+  // Gerando uma lista onde se guarda as músicas favoritas do usuário
+  
   var lista_ranking = [];
-function ver_musicafav(){
-var rankMusica = Number(in_musica.value);
-lista_ranking.push(rankMusica);
 
-  for(var contador = 0; contador < lista_ranking.length; contador++){
-    var rank = lista_ranking[contador]
-    textomusica.innerHTML += `${rank}<br>`
+  function ver_musicafav() {
+    var rankMusica = in_musica.value;
+    lista_ranking.push(rankMusica);
+    
+    textomusica.innerHTML = "";
+    for (var contador = 1; contador < lista_ranking.length; contador++) {
+      var rank = lista_ranking[contador];
+      textomusica.innerHTML += `<br> ${contador} - ${rank}<br>`;
+    }
+    if(lista_ranking.length > 3){
+      IdBotaoMusicaFav.style.display = "none";
+      idAtualizaMusica.style.display= "block"
+    }
+
   }
-}
 
+ function atualizaMusica(){
+  
+   textomusica.innerHTML = "";
+   lista_ranking = [];
+   IdBotaoMusicaFav.style.display = "block";
+    idAtualizaMusica.style.display= "none"
+ }
 
+  // texto em que fica na parte perfil
   texto_bemvindo.innerHTML = `<br>Olá ${sessionStorage.nome_usuario_meuapp} <br>
 Fiquei sabendo em que você gosta de ${sessionStorage.generoFavorito_usuario}
 <br>Gosta da música ${sessionStorage.musicaFavorita_usuario} do(a) artista ${sessionStorage.cantorFavorito_usuario}`;
-
-
-
 
 </script>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+    }
+
+    .mySlides {
+        display: none;
+        width: 100%;
+
+    }
+
+    .container-carousel {
+        width: 100%;
+        height: 45%;
+
+        float: left;
+
+
+    }
+
+    .parte_img {
+        float: left;
+        width: 10%;
+
+    }
+
+    .geral {
+        width: 100%;
+        height: 500px;
+        margin: auto;
+
+    }
+</style>
+
+<body>
+    <div class="geral">
+        <div class="container-carousel">
+            <img class="mySlides" src="imagem/Fortaleza-a-noite.jpg">
+
+            <a href="teste1.html">
+                <img src="imagem/Fortaleza-a-noite.jpg" width="100" height="100">
+            </a>
+            <img class="mySlides" src="imagem/brasil-2.jpg">
+            <img class="mySlides" src="imagem/brasil-3.jpg">
+        </div>
+
+    </div>
+    <br>
+    <img class="parte_img" src="imagem/bt.jpg" onclick="plusDivs(1)">
+    <img class="parte_img" src="imagem/bt.jpg" onclick="plusDivs(-1)">
+</body>
+
+</html>
+<>
+
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = x.length
+        }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+    }
+
+</>

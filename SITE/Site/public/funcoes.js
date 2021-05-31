@@ -2,8 +2,9 @@ let login_usuario;
 let nome_usuario;
 
 function redirecionar_login() {
-    window.location.href = '../principal/musica.html';
+    window.location.href = '/Home/index.html';
 }
+
 
 function verificar_autenticacao() {
     login_usuario = sessionStorage.login_usuario_meuapp;
