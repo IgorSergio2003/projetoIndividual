@@ -95,8 +95,9 @@ border-radius: 10px;
     height: 80%;
     margin-top: 20px;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    
+  
 }
 
 
@@ -105,18 +106,40 @@ input{
     margin-top: 3px;
     border-radius: 3px;
     border: 1px solid green;
+    width: 100%;
     
 }
 
 span{
     margin-top: 20px ;
-    text-align: start ;
     color: white;
     font-weight: bold;
     font-size: 20px;
+    text-align: start;
+    
 }
 
 textarea{
     border-radius: 3px;
     border: 1px solid green;  
+    width: 100%;
+    resize: none;
+    margin-top: 3px ;
+}
+
+#btn-suporte{
+    margin-top: 10px;
+    width: 150px;
+    height: 30px;
+    background-color: black;
+    color: green;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 1s;
+}
+
+#btn-suporte:hover{
+    background-color: green;
+    color: black;
 }
