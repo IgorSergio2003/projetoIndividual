@@ -19,11 +19,13 @@ function verificar_autenticacao() {
     
 }
 
+
 function logoff() {
     finalizar_sessao();
     sessionStorage.clear();
     redirecionar_login();
 }
+
 
 function validar_sessao() {
     fetch(`/usuarios/sessao/${login_usuario}`, {cache:'no-store'})

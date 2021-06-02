@@ -19,7 +19,7 @@
         <ul>
           <a href="../Home/index.html">Músicas</a>
           <a href="../SOBRE/sobre.html">Sobre</a>
-          <a onclick="logoff()">Sair</a>
+          <a onclick="logoff()" class="btnsair">Sair</a>
           
         </ul>
       </div>
@@ -58,7 +58,7 @@
 
       <!-- Musicas favoritas do usuário -->
       <div class="musicasfavoritas">
-        <h1>Ranking das melhores músicas</h1>
+        <h1>Suas músicas favoritas</h1>
         <br />
         <br />
         <div class="inputmusicas">
@@ -136,7 +136,18 @@
           controls
         ></audio>
       </div>
+
+      <div class="musicarecomendada">
+        <h1>Música recomendada pelo criador</h1>
+        <div class="ytb">
+          <iframe width="450" height="300" src="https://www.youtube.com/embed/w5tWYmIOWGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <span>Imagine Dragons - On top of the world </span>
     </div>
+    </div>
+
+    
+
 
     <!-- Footer do site -->
     <footer>
@@ -154,9 +165,11 @@
   </body>
 
 
+
+
+
   <script>
 
-    // Gráfico do ranking
     var votacaomus1 = 41;
 
     var votacaomus2 = 20;

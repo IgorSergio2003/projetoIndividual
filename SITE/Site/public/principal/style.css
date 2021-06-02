@@ -85,6 +85,10 @@ audio{
 
 }
 
+.btnsair{
+    cursor: pointer;
+}
+
 .divmus{
 text-align: center;
 align-items: center;
@@ -97,6 +101,7 @@ width: 500px;
 height: 500px   ;
 background-color: #4f4f4f;
 border-radius: 10px ;
+
 }
 
 .perfil{
@@ -109,12 +114,14 @@ background-color: #4f4f4f;
 border-radius: 5px;
 padding: auto;
 text-align: center;
+border: green solid 3px;
 
 }
 
 .perfil h2{
     font-size: 25px;
     color: whitesmoke;
+    
 }
 
 .container-votacao{
@@ -129,6 +136,7 @@ text-align: center;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: green solid 3px;
     }
 
     .container-votacao span{
@@ -149,6 +157,7 @@ text-align: center;
     .container-votacao img{
         height: 200px;
         border-radius: 15px;
+
     }
 
     .contentmus{
@@ -170,7 +179,7 @@ width: 33%;
         margin-right: auto;
         background-color: #4f4f4f;
         border-radius: 5px;
-        
+        border: green solid 3px;
         }
 
 
@@ -183,6 +192,7 @@ width: 33%;
         background-color: #4f4f4f;
         border-radius: 5px;
         text-align: center;
+        border: green solid 3px;
         
     }   
 
@@ -273,6 +283,12 @@ color: green;
 background-color: black;
 font-weight: bold;
 border-radius: 6px;
+transition: 1s;
+font-weight: bold;
+}
+button:hover{
+    color: black;
+    background-color: green;
 }
 
 .textoima:hover{
@@ -327,6 +343,7 @@ border-radius: 6px;
             margin-top: 20px;
         }
 
+
         #textoVotacao{
             text-align: center;
             margin-left: 50px;
@@ -339,4 +356,36 @@ border-radius: 6px;
             color: white;
             margin-top: 5px;
 
+        }
+
+        .musicarecomendada{
+            width: 500px;
+            height: 500px   ;
+            background-color:#4f4f4f; 
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+            border: green solid 3px;
+            border-radius: 5px;
+        }
+
+
+        .musicarecomendada h1{
+            color: white;
+            -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: green;
+        }
+
+        .musicarecomendada span{
+            font-size: 25px;
+            color: white;
+            -webkit-text-stroke-width: 1px;
+     -webkit-text-stroke-color: #00FF00;
+     font-weight: bold;
+        }
+
+        iframe{
+            margin-top: 30px;
+            border: #00FF00 solid 3px;
+            border-radius: 12px;
         }
